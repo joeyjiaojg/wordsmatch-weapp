@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<navigation-bar title="WordsMatch" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<view class="container">
+  <view class="weui-cells__title">输入正则表达式 (ju[a-z]{1,3} / ju.*)</view>
+  <view class="weui-cell weui-cell_input">
+    <form id="form" bindsubmit="onSubmit">
+      <input id="input" class="weui-input" bindinput="onInput" auto-focus value="{{inputValue}}" placeholder="ju[a-z]"/>
+      <button id="button_filter" form-type="submit" type="primary" >Filter Words</button>
+    </form>
+  </view>
+  <scroll-view class="scrollarea" scroll-y type="list">
+    <text id="content">{{ displayText }}</text>
+  </scroll-view>
+</view>
+
